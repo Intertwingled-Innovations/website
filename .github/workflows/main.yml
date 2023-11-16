@@ -17,3 +17,11 @@ jobs:
       - name: Sync files to S3 bucket
         run: |
           aws s3 sync output s3://www.intertwingledinnovations.com --delete
+      - name: Invalidate CloudFront distribution paths
+        uses: chetan/invalidate-cloudfront-action@v2
+        env:
+          DISTRIBUTION: ${{ secrets.CLOUDFRONT_DISTRIBUTION }}
+          PATHS: "/index.html"
+          AWS_REGION: "eu-west-2"
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
