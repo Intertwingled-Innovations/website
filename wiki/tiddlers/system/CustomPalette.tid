@@ -12,8 +12,8 @@ intertwingled-innovations-bright-p9: color(display-p3 0 0.81 1)
 intertwingled-innovations-bright-faded: #71004f
 intertwingled-innovations-mid: #CC1816
 intertwingled-innovations-primary: #0000FF
-intertwingled-innovations-accent-p9: color(display-p3 0 1 0.54)
-intertwingled-innovations-accent: #00ff7b
+intertwingled-innovations-accent-p9: color(display-p3 1 1 0)
+intertwingled-innovations-accent: #ffff00
 
 alert-background: #ffe476
 alert-border: #b99e2f
