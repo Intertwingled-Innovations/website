@@ -1,0 +1,13 @@
+tags: $:/_MainMenu
+title: HelloThere
+type: text/vnd.tiddlywiki
+
+Intertwingled Innovations is the home of TiddlyWiki, an unorthodox open source ~JavaScript wiki with powerful capabilities not found in other software.
+
+Email us at ''jeremy (at) intertwingledinnovations (dot) com'', or use the services below.
+
+<div class="tc-social-list">
+
+{{$:/_Social}}
+
+</div>

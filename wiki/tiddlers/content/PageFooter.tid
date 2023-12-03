@@ -1,0 +1,31 @@
+title: $:/_PageFooter
+
+<div class="tc-page-footer">
+
+<div class="tc-page-footer-inner">
+
+<div class="tc-page-footer-logo">
+
+{{$:/_Logo}}
+
+</div>
+
+<div class="tc-page-footer-intro">
+
+<div class="tc-social-list tc-social-list-horizontal">
+
+{{$:/_Social}}
+
+</div>
+
+Copyright &copy; 2023 Intertwingled Innovations Limited
+
+Intertwingled Innovations is registered in England and Wales, Company No: 15184450
+
+Powered by TiddlyWiki
+
+</div>
+
+</div>
+
+</div>

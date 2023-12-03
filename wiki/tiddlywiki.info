@@ -1,0 +1,23 @@
+{
+	"description": "Intertwingled Innovations website",
+	"plugins": [
+		"tiddlywiki/blog",
+		"tiddlywiki/fullscreen",
+		"tiddlywiki/stacked-view"
+	],
+	"themes": [
+		"tiddlywiki/vanilla",
+		"tiddlywiki/snowwhite"
+	],
+	"languages": [
+		"en-GB"
+	],
+	"build": {
+		"site": [
+			"--save","[is[image]]","[encodeuricomponent[]addprefix[images/]]",
+			"--setfield","[is[image]]","_canonical_uri","$:/core/templates/canonical-uri-external-image","text/plain",
+			"--setfield","[is[image]]","text","","text/plain",
+			"--rendertiddler","$:/_StaticTemplates/AllTiddlers","index.html","text/plain",
+			"--rendertiddler","$:/core/save/all","wiki.html","text/plain"]
+	}
+}

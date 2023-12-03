@@ -1,0 +1,71 @@
+title: $:/_StaticTemplates/AllTiddlers
+tags: $:/tags/Exporter
+description: Single Page Website
+extension: .html
+
+\whitespace trim
+\import [subfilter{$:/core/config/GlobalImportFilter}]
+\procedure tv-wikilink-template() #$uri_encoded$
+\procedure tv-config-toolbar-icons() no
+\procedure tv-config-toolbar-text() no
+\procedure tv-config-toolbar-class() tc-btn-invisible
+`<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Intertwingled Innovations Limited</title>
+
+	<script type="module">
+		document.documentElement.classList.remove('no-js');
+		document.documentElement.classList.add('js');
+	</script>
+
+	<meta name="description" content="Website for Intertwingled Innovations Limited, a software consultancy founded by Jeremy Ruston, the creator of TiddlyWiki">
+	<meta property="og:title" content="Intertwingled Innovations Limited – Open Source Development for TiddlyWiki">
+	<meta property="og:description" content="Website for Intertwingled Innovations Limited, a software consultancy founded by Jeremy Ruston, the creator of TiddlyWiki">
+	<meta property="og:image" content="https://intertwingledinnovations.com/images/wordmark-black-450.png">
+	<meta property="og:image:alt" content="Intertwingled Innovations Logo">
+	<meta property="og:locale" content="en_GB">
+	<meta property="og:type" content="website">
+	<meta name="twitter:card" content="summary">
+	<meta property="og:url" content="https://intertwingledinnovations.com/">
+	<link rel="canonical" href="https://intertwingledinnovations.com/">
+
+	<link rel="icon" href="images/logo-black-450.png">
+	<link rel="icon" href="images/logo-black.svg" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="images/logo-black-450.png">
+	<!-- <link rel="manifest" href="/my.webmanifest"> -->
+	<meta name="theme-color" content="`<<colour intertwingled-innovations-mid>>`">
+<style type="text/css">
+`{{$:/_StaticTemplates/Styles.css}}`
+</style>
+<title>`{{$:/core/wiki/title}}`</title>
+</head>
+<body class="tc-body">
+<nav class="tc-hamburger-menu">
+<ul>
+`<$list filter="[tag[$:/_MainMenu]]">
+`<li>`
+<$view tiddler="$:/_StaticTemplates/MenuLink" format="htmlwikified"/>
+`</li>`
+</$list>
+`</ul>
+</nav>
+<a id="_top"></a>`
+<$importvariables filter="[[$:/core/ui/PageMacros]] [all[shadows+tiddlers]tag[$:/tags/Macro]!has[draft.of]]">
+<$view tiddler="$:/_PageHeading" format="htmlwikified"/>
+`<section class="tc-story-river">
+`<$view tiddler="$:/_StoryHeading" format="htmlwikified" mode="inline"/>
+<$list filter={{$:/DefaultTiddlers}} template="$:/_StaticTemplates/Tiddler"/>`
+</section>`
+<$view tiddler="$:/_PageFooter" format="htmlwikified"/>
+</$importvariables>
+`<script>`
+{{{ [all[tiddlers+shadows]tag[$:/tags/_StaticTemplates/JavaScript]] ||$:/core/templates/plain-text-tiddler}}}
+`</script>
+</body>
+</html>
+`

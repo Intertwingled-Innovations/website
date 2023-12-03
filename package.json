@@ -1,0 +1,27 @@
+{
+  "name": "intertwingled-innovations-limited-website",
+  "version": "0.0.0",
+  "author": "Jeremy Ruston <jeremy@jermolene.com>",
+  "description": "Intertwingled Innovations Limited Website",
+  "contributors": [
+    {
+      "name": "Jeremy Ruston",
+      "email": "jeremy@jermolene.com"
+    }
+  ],
+  "main": "./node_modules/tiddlywiki/tiddlywiki.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/intertwingled-innovations/website"
+  },
+  "dependencies": {
+	"tiddlywiki": "*"
+  },
+  "devDependencies": {
+  },
+  "bundleDependencies": [],
+  "license": "BSD",
+  "scripts": {
+    "start": "node ./node_modules/tiddlywiki/tiddlywiki.js ./wiki/ --listen port=8080"
+  }
+}

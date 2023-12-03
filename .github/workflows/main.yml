@@ -8,6 +8,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Build site
+        run: |
+          npm install -g tiddlywiki
+          tiddlywiki ./wiki --verbose --build site
       - name: Setup AWS CLI
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -16,7 +20,7 @@ jobs:
           aws-region: eu-west-2
       - name: Sync files to S3 bucket
         run: |
-          aws s3 sync output s3://www.intertwingledinnovations.com --delete
+          aws s3 sync wiki/output s3://www.intertwingledinnovations.com --delete
       - name: Invalidate CloudFront distribution paths
         uses: chetan/invalidate-cloudfront-action@v2
         env:

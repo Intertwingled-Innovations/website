@@ -1,0 +1,435 @@
+title: $:/_StaticStyles
+
+\define register-font(family,title,style,weight)
+@font-face {
+  font-family: "$family$";
+  font-style: $style$;
+  font-weight: $weight$;
+  src: url(<<datauri "$title$">>) format("woff");
+}
+\end
+
+\define content-width() 770px
+
+\define narrow-breakpoint() 770px
+
+\define super-narrow-breakpoint() 400px
+
+\rules only filteredtranscludeinline transcludeinline macrodef macrocallinline
+
+/*
+** Fonts
+*/
+
+/***
+<<register-font "Lato" "$:/_fonts/lato-black-webfont.woff" "normal" "900">>
+<<register-font "Lato" "$:/_fonts/lato-blackitalic-webfont.woff" "italic" "900">>
+<<register-font "Lato" "$:/_fonts/lato-hairline-webfont.woff" "normal" "100">>
+<<register-font "Lato" "$:/_fonts/lato-hairlineitalic-webfont.woff" "italic" "100">>
+***/
+<<register-font "Lato" "$:/_fonts/lato-bold-webfont.woff" "normal" "700">>
+<<register-font "Lato" "$:/_fonts/lato-bolditalic-webfont.woff" "italic" "700">>
+<<register-font "Lato" "$:/_fonts/lato-italic-webfont.woff" "italic" "400">>
+<<register-font "Lato" "$:/_fonts/lato-light-webfont.woff" "normal" "300">>
+<<register-font "Lato" "$:/_fonts/lato-lightitalic-webfont.woff" "italic" "300">>
+<<register-font "Lato" "$:/_fonts/lato-regular-webfont.woff" "normal" "400">>
+
+html body.tc-body {
+	background: <<colour intertwingled-innovations-bright-p9>>;
+	font-family: "Lato", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", "DejaVu Sans", sans-serif;
+}
+
+/*
+** Page background - visible during overscroll
+*/
+
+html {
+	background: <<colour intertwingled-innovations-bright>>;
+}
+
+/*
+** Center the page
+*/
+
+@media (max-width: <<narrow-breakpoint>>) {
+
+html .tc-story-river {
+	padding-top: 42px;
+}
+
+}
+
+@media (min-width: <<narrow-breakpoint>>) {
+
+html .tc-page-container,
+nav.tc-hamburger-menu {
+	text-align: center;
+}
+
+html .tc-story-river,
+nav.tc-hamburger-menu ul {
+	position: relative;
+	width: <<content-width>>;
+	padding: 42px;
+	text-align: left;
+}
+
+nav.tc-hamburger-menu ul {
+	padding: 0 80px;
+}
+
+.tc-page-footer-inner {
+	position: relative;
+	width: <<content-width>>;
+	padding: 42px 84px 42px 84px;
+	margin: 0 auto;
+	text-align: left;
+}
+
+}
+
+html .tc-story-river {
+	position: relative;
+	z-index: 0;
+	margin: 0 auto;
+}
+
+/*
+** Tiddler display tweaks
+*/
+
+.tc-tiddler-frame {
+	transform-origin: 50% 0%;
+}
+
+body.scrolled-top .tc-tiddler-frame,
+body.scrolled-mid .tc-tiddler-frame {
+    cursor: pointer;
+}
+
+.tc-tiddler-controls svg {
+    vertical-align: middle;
+	fill: <<colour tiddler-controls-foreground>>;
+}
+
+/* Account for the hamburger menu when jumping to an anchor */
+
+.tc-tiddler-anchor {
+	padding-top: 2.5em;
+	margin-top: -2.5em;
+}
+
+/*
+** Hamburger menu
+*/
+
+html nav.tc-hamburger-menu {
+	margin: 0 auto;
+}
+
+html nav.tc-hamburger-menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: <<colour intertwingled-innovations-mid>>;
+	z-index: 990;
+}
+
+nav.tc-hamburger-menu ul {
+	margin: 0 auto;
+	list-style-type: none;
+	text-align: center;
+}
+
+nav.tc-hamburger-menu ul li {
+	display: inline-block;
+	margin: 0.25em 0.5em 0.25em 0.5em;
+}
+
+nav.tc-hamburger-menu ul li p {
+	margin: 0;
+}
+
+nav.tc-hamburger-menu ul li a {
+	font-weight: 700;
+	color: <<colour intertwingled-innovations-white>>;
+	text-decoration: none;
+}
+
+nav.tc-hamburger-menu ul li a:hover {
+	color: #fff;
+}
+
+/*
+** Style tweaks
+*/
+
+h2.tc-title {
+	font-weight: 700;
+}
+
+/*
+** Page background
+*/
+
+.tc-page-background-logo-wrapper {
+	position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 1500px;
+    overflow: hidden;
+	fill: <<colour "intertwingled-innovations-bright-faded">>;
+}
+
+.tc-page-background-logo {
+}
+
+.tc-page-background-logo-wrapper svg {
+	position: absolute;
+}
+
+.tc-page-background-logo-wrapper svg:nth-child(1) {
+	left: 30%;
+	top: 400px;
+	width: 250px;
+	height: 250px;
+}
+
+.tc-page-background-logo-wrapper svg:nth-child(2) {
+	left: 20%;
+	top: 100px;
+	width: 350px;
+	height: 350px;
+}
+
+.tc-page-background-logo-wrapper svg:nth-child(3) {
+	left: 50%;
+	top: 200px;
+	width: 450px;
+	height: 450px;
+}
+
+.tc-page-background-logo-wrapper svg:nth-child(4) {
+	left: 5%;
+	top: 300px;
+	width: 550px;
+	height: 550px;
+}
+
+/*
+** Page Heading
+*/
+
+.tc-page-heading {
+	margin-top: 3em;
+	margin-bottom: 6em;
+}
+
+.tc-page-heading a.tc-tiddlylink {
+	font-weight: 600;
+	color: <<colour intertwingled-innovations-primary>>;
+	text-shadow: none;
+    padding: 2px;
+}
+
+.tc-page-heading a.tc-tiddlylink:hover {
+	text-decoration: none;
+	background: <<colour intertwingled-innovations-primary>>;
+	color: <<colour intertwingled-innovations-white>>;
+}
+
+.tc-page-heading img {
+	width: 100%;
+}
+
+.tc-page-heading-intro {
+	margin-top: 1em;
+	text-align: center;
+	font-weight: 600;
+	font-size: 1.6em;
+	line-height: 1.2;
+	color: <<colour intertwingled-innovations-black>>;
+	fill: <<colour intertwingled-innovations-black>>;
+    background: <<colour intertwingled-innovations-accent>>;
+    background: <<colour intertwingled-innovations-accent-p9>>;
+    padding: 0.25em;
+    border-radius: 0.3rem;
+    box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.25);
+}
+
+/*
+** Page scroll prompt
+*/
+
+.tc-page-scroll-prompt {
+	position: fixed;
+	bottom: 0;
+	left: 50%;
+	right: 50%;
+	transition: opacity 500ms ease-in-out;
+	opacity: 0;
+}
+
+body.scrolled-top .tc-page-scroll-prompt {
+	opacity: 1;
+}
+
+.tc-page-scroll-prompt svg {
+	width: 3em;
+	height: 3em;
+    border: 1px solid <<colour intertwingled-innovations-mid>>;
+    fill: <<colour intertwingled-innovations-mid>>;
+    border-radius: 40px;
+    padding: 12px;
+	margin-bottom: 2em;
+}
+
+.tc-page-scroll-prompt svg:hover {
+	background: <<colour intertwingled-innovations-mid>>;
+    fill: <<colour intertwingled-innovations-bright>>;
+}
+
+/*
+** Page Footer
+*/
+
+.tc-page-footer {
+	background: <<colour intertwingled-innovations-grey>>;
+	color: <<colour intertwingled-innovations-white>>;
+	padding: 1em;
+}
+
+.tc-page-footer a,
+.tc-page-footer a:visited,
+.tc-social-list a,
+.tc-social-list a:visited {
+    display: inline-block;
+	color: <<colour intertwingled-innovations-bright>>;
+	text-decoration: none;
+	padding: 2px;
+    border-radius: 2px;
+}
+
+.tc-social-list a,
+.tc-social-list a:visited {
+	color: <<colour intertwingled-innovations-black>>;
+}
+
+.tc-page-footer a:hover,
+.tc-social-list a:hover {
+	background: <<colour intertwingled-innovations-bright>>;
+	color: <<colour intertwingled-innovations-black>>;
+}
+
+.tc-page-footer .tc-page-footer-logo img {
+	width: 160px;
+}
+
+.tc-social-list ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+.tc-social-list.tc-social-list-horizontal ul li {
+    display: inline-block;
+}
+
+.tc-social-list.tc-social-list-horizontal.tc-social-list-centered ul {
+	text-align: center;
+}
+
+.tc-social-list ul li {
+    margin: 3px;
+}
+
+.tc-social-list ul li a svg,
+.tc-social-list ul li a:visited svg {
+	vertical-align: middle;
+	fill: <<colour intertwingled-innovations-black>>;
+}
+
+/*
+** Adjustments for wide screens
+*/
+
+@media (min-width: {{$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint}}) {
+
+html .tc-page-heading {
+}
+
+}
+
+/*
+** Adjustments for narrow screens
+*/
+
+@media (max-width: {{$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint}}) {
+
+html .tc-tiddler-frame {
+    padding: 28px 42px 42px 42px;
+    margin-left: -1px;
+    margin-right: -1px;
+}
+
+}
+
+@media (max-width: <<super-narrow-breakpoint>>) {
+
+nav.tc-hamburger-menu ul {
+    padding: 0 7px;
+}
+
+.tc-page-scroll-prompt svg {
+	width: 2em;
+	height: 2em;
+	margin-bottom: 1em;
+    border-radius: 40px;
+    padding: 4px;
+}
+
+html .tc-tiddler-frame {
+    padding: 14px 14px 14px 14px;
+}
+
+html .tc-story-river {
+    padding-top: 0;
+}
+
+.tc-page-heading {
+    margin: 17px 14px 4em 14px;
+}
+
+}
+
+/*
+** Adjustments for printing
+*/
+
+@media print {
+
+html {
+	background: transparent;
+}
+
+.tc-page-footer {
+	background: transparent;
+}
+
+.tc-story-river .tc-tiddler-frame {
+	transform: none !important;
+}
+
+.tc-hamburger-menu, .tc-page-background-logo-wrapper {
+	display: none;
+}
+
+.tc-page-heading, .tc-page-footer, .tc-page-footer-inner {
+	margin-left: 0;
+	margin-right: 0;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+}

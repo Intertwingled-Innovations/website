@@ -1,0 +1,41 @@
+title: $:/_StaticTemplates/Tiddler
+
+
+\procedure show-icon(title)
+<$wikify name="icon" text={{{ [<title>addprefix[{{]addsuffix[}}]] }}} mode="inline" output="html">
+<$text text=<<icon>>/>
+</$wikify>
+\end
+`
+<div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists" data-tiddler-title="`<$text text={{{ [<currentTiddler>encodeuricomponent[]] }}}/>`">
+
+<div class="tc-tiddler-title">
+
+<div class="tc-titlebar">
+
+<div class="tc-tiddler-controls">
+
+<a href="#_top">`<<show-icon "$:/core/images/up-arrow">>`</a>
+
+</div>
+
+<h2 class="tc-title">
+
+<a class="tc-tiddler-anchor" id="`<$text text={{!!title}}/>`">
+`<$view field="title" format="htmlencoded"/>`
+</a>
+
+</h2>
+
+</div>
+
+</div>
+
+<div class="tc-tiddler-body">
+`
+<$view format="htmlwikified"/>
+`
+</div>
+
+</div>
+`

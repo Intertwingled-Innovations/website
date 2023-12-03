@@ -1,0 +1,9 @@
+title: $:/_StoryHeading
+
+\whitespace trim
+<div class="tc-page-heading">
+<$transclude tiddler="$:/wordmark-black.svg" mode="inline"/>
+<div class="tc-page-heading-intro">
+{{$:/SiteSubtitle}}
+</div>
+</div>

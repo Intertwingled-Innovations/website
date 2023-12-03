@@ -1,0 +1,46 @@
+{
+	"tiddlers": [
+		{
+			"file": "lato-bold-webfont.woff",
+			"fields": {
+				"type": "application/font-woff",
+				"title": "$:/_fonts/lato-bold-webfont.woff"
+			}
+		},
+		{
+			"file": "lato-bolditalic-webfont.woff",
+			"fields": {
+				"type": "application/font-woff",
+				"title": "$:/_fonts/lato-bolditalic-webfont.woff"
+			}
+		},
+		{
+			"file": "lato-italic-webfont.woff",
+			"fields": {
+				"type": "application/font-woff",
+				"title": "$:/_fonts/lato-italic-webfont.woff"
+			}
+		},
+		{
+			"file": "lato-light-webfont.woff",
+			"fields": {
+				"type": "application/font-woff",
+				"title": "$:/_fonts/lato-light-webfont.woff"
+			}
+		},
+		{
+			"file": "lato-lightitalic-webfont.woff",
+			"fields": {
+				"type": "application/font-woff",
+				"title": "$:/_fonts/lato-lightitalic-webfont.woff"
+			}
+		},
+		{
+			"file": "lato-regular-webfont.woff",
+			"fields": {
+				"type": "application/font-woff",
+				"title": "$:/_fonts/lato-regular-webfont.woff"
+			}
+		}
+	]
+}
