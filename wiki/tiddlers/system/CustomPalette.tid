@@ -8,11 +8,11 @@ intertwingled-innovations-white: #F9F9EB
 intertwingled-innovations-black: #292939
 intertwingled-innovations-grey: #666661
 intertwingled-innovations-bright: #00d2ff
-intertwingled-innovations-bright-p9: color(display-p3 0 0.81 1)
-intertwingled-innovations-bright-faded: #71004f
+intertwingled-innovations-bright-p3: color(display-p3 0 0.81 1)
 intertwingled-innovations-mid: #CC1816
+intertwingled-innovations-mid-p3: color(display-p3 1 0.07 0)
 intertwingled-innovations-primary: #0000FF
-intertwingled-innovations-accent-p9: color(display-p3 1 1 0)
+intertwingled-innovations-accent-p3: color(display-p3 1 1 0)
 intertwingled-innovations-accent: #ffff00
 
 alert-background: #ffe476

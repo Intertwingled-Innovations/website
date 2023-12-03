@@ -35,7 +35,7 @@ title: $:/_StaticStyles
 <<register-font "Lato" "$:/_fonts/lato-regular-webfont.woff" "normal" "400">>
 
 html body.tc-body {
-	background: <<colour intertwingled-innovations-bright-p9>>;
+	background: <<colour intertwingled-innovations-bright-p3>>;
 	font-family: "Lato", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", "DejaVu Sans", sans-serif;
 }
 
@@ -133,6 +133,7 @@ html nav.tc-hamburger-menu {
 	left: 0;
 	right: 0;
 	background: <<colour intertwingled-innovations-mid>>;
+	background: <<colour intertwingled-innovations-mid-p3>>;
 	z-index: 990;
 }
 
@@ -172,16 +173,6 @@ h2.tc-title {
 /*
 ** Page background
 */
-
-.tc-page-background-logo-wrapper {
-	position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    height: 1500px;
-    overflow: hidden;
-	fill: <<colour "intertwingled-innovations-bright-faded">>;
-}
 
 .tc-page-background-logo {
 }
@@ -245,6 +236,8 @@ h2.tc-title {
 }
 
 .tc-page-heading-intro {
+	border-top: 1rem solid <<colour intertwingled-innovations-mid>>;
+	border-color: <<colour intertwingled-innovations-mid-p3>>;
 	margin-top: 1em;
 	text-align: center;
 	font-weight: 600;
@@ -253,42 +246,10 @@ h2.tc-title {
 	color: <<colour intertwingled-innovations-black>>;
 	fill: <<colour intertwingled-innovations-black>>;
     background: <<colour intertwingled-innovations-accent>>;
-    background: <<colour intertwingled-innovations-accent-p9>>;
-    padding: 0.25em;
+    background: <<colour intertwingled-innovations-accent-p3>>;
+    padding: 1.2rem;
     border-radius: 0.3rem;
     box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.25);
-}
-
-/*
-** Page scroll prompt
-*/
-
-.tc-page-scroll-prompt {
-	position: fixed;
-	bottom: 0;
-	left: 50%;
-	right: 50%;
-	transition: opacity 500ms ease-in-out;
-	opacity: 0;
-}
-
-body.scrolled-top .tc-page-scroll-prompt {
-	opacity: 1;
-}
-
-.tc-page-scroll-prompt svg {
-	width: 3em;
-	height: 3em;
-    border: 1px solid <<colour intertwingled-innovations-mid>>;
-    fill: <<colour intertwingled-innovations-mid>>;
-    border-radius: 40px;
-    padding: 12px;
-	margin-bottom: 2em;
-}
-
-.tc-page-scroll-prompt svg:hover {
-	background: <<colour intertwingled-innovations-mid>>;
-    fill: <<colour intertwingled-innovations-bright>>;
 }
 
 /*
@@ -296,35 +257,51 @@ body.scrolled-top .tc-page-scroll-prompt {
 */
 
 .tc-page-footer {
-	background: <<colour intertwingled-innovations-grey>>;
+	background: <<colour intertwingled-innovations-mid>>;
+	background: <<colour intertwingled-innovations-mid-p3>>;
 	color: <<colour intertwingled-innovations-white>>;
 	padding: 1em;
 }
 
-.tc-page-footer a,
-.tc-page-footer a:visited,
-.tc-social-list a,
-.tc-social-list a:visited {
+.tc-page-footer .tc-social-list a,
+.tc-page-footer .tc-social-list a:visited {
     display: inline-block;
-	color: <<colour intertwingled-innovations-bright>>;
+	color: <<colour intertwingled-innovations-accent>>;
+	fill: <<colour intertwingled-innovations-accent>>;
 	text-decoration: none;
 	padding: 2px;
     border-radius: 2px;
 }
 
-.tc-social-list a,
-.tc-social-list a:visited {
-	color: <<colour intertwingled-innovations-black>>;
-}
-
-.tc-page-footer a:hover,
-.tc-social-list a:hover {
-	background: <<colour intertwingled-innovations-bright>>;
-	color: <<colour intertwingled-innovations-black>>;
+.tc-page-footer .tc-social-list a:hover {
+	background: <<colour intertwingled-innovations-white>>;
+	color: <<colour intertwingled-innovations-mid>>;
 }
 
 .tc-page-footer .tc-page-footer-logo img {
 	width: 160px;
+}
+
+/*
+** Social List
+*/
+
+.tc-social-list a,
+.tc-social-list a:visited {
+    display: inline-block;
+	color: <<colour intertwingled-innovations-mid>>;
+	color: <<colour intertwingled-innovations-mid-p3>>;
+	text-decoration: none;
+	padding: 2px;
+    border-radius: 2px;
+}
+
+.tc-social-list a:hover {
+	background: <<colour intertwingled-innovations-accent>>;
+	color: <<colour intertwingled-innovations-mid>>;
+	color: <<colour intertwingled-innovations-mid-p3>>;
+	fill: <<colour intertwingled-innovations-mid>>;
+	fill: <<colour intertwingled-innovations-mid-p3>>;
 }
 
 .tc-social-list ul {
@@ -347,7 +324,6 @@ body.scrolled-top .tc-page-scroll-prompt {
 .tc-social-list ul li a svg,
 .tc-social-list ul li a:visited svg {
 	vertical-align: middle;
-	fill: <<colour intertwingled-innovations-black>>;
 }
 
 /*

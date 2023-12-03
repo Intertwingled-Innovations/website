@@ -12,7 +12,7 @@ title: $:/_PageFooter
 
 <div class="tc-page-footer-intro">
 
-<div class="tc-social-list tc-social-list-horizontal">
+<div class="tc-social-list">
 
 {{$:/_Social}}
 
