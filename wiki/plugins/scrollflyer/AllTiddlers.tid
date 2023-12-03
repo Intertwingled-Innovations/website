@@ -26,7 +26,7 @@ extension: .html
 	<meta name="description" content="Website for Intertwingled Innovations Limited, a software consultancy founded by Jeremy Ruston, the creator of TiddlyWiki">
 	<meta property="og:title" content="Intertwingled Innovations Limited – Open Source Development for TiddlyWiki">
 	<meta property="og:description" content="Website for Intertwingled Innovations Limited, a software consultancy founded by Jeremy Ruston, the creator of TiddlyWiki">
-	<meta property="og:image" content="https://intertwingledinnovations.com/images/wordmark-black-450.png">
+	<meta property="og:image" content="https://intertwingledinnovations.com/images/%2524%253A%252Fwordmark-black-450.png">
 	<meta property="og:image:alt" content="Intertwingled Innovations Logo">
 	<meta property="og:locale" content="en_GB">
 	<meta property="og:type" content="website">
@@ -34,9 +34,9 @@ extension: .html
 	<meta property="og:url" content="https://intertwingledinnovations.com/">
 	<link rel="canonical" href="https://intertwingledinnovations.com/">
 
-	<link rel="icon" href="images/logo-black-450.png">
-	<link rel="icon" href="images/logo-black.svg" type="image/svg+xml">
-	<link rel="apple-touch-icon" href="images/logo-black-450.png">
+	<link rel="icon" href="images/%2524%253A%252Flogo-black-450.png">
+	<link rel="icon" href="images/%2524%253A%252Flogo-black.svg" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="images/%2524%253A%252Flogo-black-450.png">
 	<!-- <link rel="manifest" href="/my.webmanifest"> -->
 	<meta name="theme-color" content="`<<colour intertwingled-innovations-mid>>`">
 <style type="text/css">
