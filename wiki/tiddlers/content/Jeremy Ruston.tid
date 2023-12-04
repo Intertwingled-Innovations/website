@@ -2,8 +2,20 @@ tags:
 title: Jeremy Ruston
 type: text/vnd.tiddlywiki
 
-<div style="float: left;width: 30%;margin: 0 1em 1em 0;-webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);-moz-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);padding: 0.5em 0.5em 1.5em 0.5em;">
-{{Jeremy.jpg}}
+<div 
+	style.float="left"
+	style.width="30%"
+	style.margin="0 1em 1em 0"
+	style.box-shadow="1px 1px 5px rgba(0, 0, 0, 0.3)"
+	style.padding="0.5em 0.5em 1.5em 0.5em"
+	style.transform="rotate(-3deg)"
+>
+<div
+	style.display="inline-block"
+	style.background="#ffff00"
+	style.background="color(display-p3 1 1 0)"
+	style.line-height="0"
+>{{Jeremy.png}}</div>
 </div>
 
 Jeremy Ruston founded Intertwingled Innovations in 2023.
