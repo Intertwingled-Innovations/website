@@ -102,6 +102,11 @@ html .tc-story-river {
 	transform-origin: 50% 0%;
 }
 
+.tc-tiddler-frame .tc-tiddler-body {
+font-size: 18px;
+line-height: 1.5;
+}
+
 body.scrolled-top .tc-tiddler-frame,
 body.scrolled-mid .tc-tiddler-frame {
     cursor: pointer;
