@@ -12,8 +12,8 @@ type: text/vnd.tiddlywiki
 >
 <div
 	style.display="inline-block"
-	style.background="#ffff00"
-	style.background="color(display-p3 1 1 0)"
+	style.background="linear-gradient( 0deg, #ff6600, #ffff00 100%)"
+	style.background="linear-gradient( 0deg, color(display-p3 1 0.31 0), color(display-p3 1 1 0) 100%)"
 	style.line-height="0"
 >{{Jeremy.png}}</div>
 </div>
