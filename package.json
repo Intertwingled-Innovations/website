@@ -22,6 +22,6 @@
   "bundleDependencies": [],
   "license": "BSD",
   "scripts": {
-    "start": "node ./node_modules/tiddlywiki/tiddlywiki.js ./wiki/ --listen port=8080"
+    "start": "node ./node_modules/tiddlywiki/tiddlywiki.js ./wiki/ --listen port=PORT"
   }
 }
