@@ -2,5 +2,12 @@ tags: $:/_MainMenu
 title: About
 type: text/vnd.tiddlywiki
 
-Intertwingled Innovations is a software consultancy that specialises in working on and around ~TiddlyWiki.
+From the moment they go into production, all custom software solutions are both an asset and a liability to a business, due to the ongoing costs of operating, updating and supporting the system. There may also be increased exposure to supplier risk.
 
+Intertwingled Innovations resolves this dilemna by offering open source solutions that offer compelling advantages over traditional proprietary software.
+
+For example, it would usually be a risk to commission custom software solutions from a company as small as Intertwingled Innovations. However, with all of our solutions being built on TiddlyWiki there is an existing ecosystem and community that clients can tap into.
+
+The key advantage of TiddlyWiki is that it gives domain experts the tools to continually improve and adapt the application themselves. Our goal is to allow people with deep domain knowledge to build custom tools themselves that address their unique needs, vastly speeding up the development cycle compared to working with a professional software developer.
+
+Intertwingled Innovations also offers hosting services with a multi-user implementation running on Amazon Web Services or Microsoft Azure, and supports clients with hundreds of wikis and thousands of users.

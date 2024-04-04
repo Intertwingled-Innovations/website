@@ -1,0 +1,18 @@
+{
+	"tiddlers": [
+		{
+			"file": "NunitoSans-Italic-VariableFont_YTLC,opsz,wdth,wght.ttf",
+			"fields": {
+				"type": "application/x-font-ttf",
+				"title": "$:/_fonts/NunitoSans-Italic.ttf"
+			}
+		},
+		{
+			"file": "NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf",
+			"fields": {
+				"type": "application/x-font-ttf",
+				"title": "$:/_fonts/NunitoSans.ttf"
+			}
+		}
+	]
+}

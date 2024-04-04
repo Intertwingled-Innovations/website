@@ -5,7 +5,7 @@ title: $:/_StaticStyles
   font-family: "$family$";
   font-style: $style$;
   font-weight: $weight$;
-  src: url(<<datauri "$title$">>) format("woff");
+  src: url(<<datauri "$title$">>) format("truetype-variations");
 }
 \end
 
@@ -21,22 +21,23 @@ title: $:/_StaticStyles
 ** Fonts
 */
 
-/***
-<<register-font "Lato" "$:/_fonts/lato-black-webfont.woff" "normal" "900">>
-<<register-font "Lato" "$:/_fonts/lato-blackitalic-webfont.woff" "italic" "900">>
-<<register-font "Lato" "$:/_fonts/lato-hairline-webfont.woff" "normal" "100">>
-<<register-font "Lato" "$:/_fonts/lato-hairlineitalic-webfont.woff" "italic" "100">>
-***/
-<<register-font "Lato" "$:/_fonts/lato-bold-webfont.woff" "normal" "700">>
-<<register-font "Lato" "$:/_fonts/lato-bolditalic-webfont.woff" "italic" "700">>
-<<register-font "Lato" "$:/_fonts/lato-italic-webfont.woff" "italic" "400">>
-<<register-font "Lato" "$:/_fonts/lato-light-webfont.woff" "normal" "300">>
-<<register-font "Lato" "$:/_fonts/lato-lightitalic-webfont.woff" "italic" "300">>
-<<register-font "Lato" "$:/_fonts/lato-regular-webfont.woff" "normal" "400">>
+/*
+Nunito axes:
+
+  YTLC
+  opsz
+  wdth
+  wght
+
+*/
+
+<<register-font "NunitoSans" "$:/_fonts/NunitoSans-Italic.ttf" "normal" "200 1000">>
+<<register-font "NunitoSans" "$:/_fonts/NunitoSans.ttf" "normal" "200 1000">>
 
 html body.tc-body {
 	background: <<colour intertwingled-innovations-bright-p3>>;
-	font-family: "Lato", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", "DejaVu Sans", sans-serif;
+	font-family: "NunitoSans", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", "DejaVu Sans", sans-serif;
+	font-variation-settings: "wdth" 95;
 }
 
 /*
@@ -103,6 +104,7 @@ html .tc-story-river {
 }
 
 .tc-tiddler-frame .tc-tiddler-body {
+font-weight: 650;
 font-size: 18px;
 line-height: 1.5;
 }
@@ -245,7 +247,7 @@ h2.tc-title {
 	border-color: <<colour intertwingled-innovations-mid-p3>>;
 	margin-top: 1em;
 	text-align: center;
-	font-weight: 600;
+	font-weight: 750;
 	font-size: 1.6em;
 	line-height: 1.2;
 	color: <<colour intertwingled-innovations-black>>;
@@ -255,6 +257,60 @@ h2.tc-title {
     padding: 1.2rem;
     border-radius: 0.3rem;
     box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.25);
+}
+
+/*
+** Page scroll prompt
+*/
+
+.tc-page-scroll-prompt {
+	position: fixed;
+	bottom: 0;
+	left: 50%;
+	right: 50%;
+	transition: opacity 500ms ease-in-out;
+	opacity: 0;
+	animation: bounce 2s infinite;
+}
+
+body.scrolled-top .tc-page-scroll-prompt {
+	opacity: 1;
+}
+
+.tc-page-scroll-prompt svg {
+	width: 5em;
+	height: 5em;
+    border: 1px solid <<colour intertwingled-innovations-mid>>;
+    fill: <<colour intertwingled-innovations-mid>>;
+    border-radius: 40px;
+    padding: 1em;
+	margin-bottom: 2em;
+}
+
+.tc-page-scroll-prompt svg:hover {
+	background: <<colour intertwingled-innovations-mid>>;
+    fill: <<colour intertwingled-innovations-bright>>;
+}
+
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {
+		-moz-transform: translateY(0);
+		-ms-transform: translateY(0);
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+	40% {
+		-moz-transform: translateY(-10px);
+		-ms-transform: translateY(-10px);
+		-webkit-transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+	60% {
+		-moz-transform: translateY(-5px);
+		-ms-transform: translateY(-5px);
+		-webkit-transform: translateY(-5px);
+		transform: translateY(-5px);
+	}
 }
 
 /*

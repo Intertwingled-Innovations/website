@@ -1,0 +1,27 @@
+tags: $:/_MainMenu
+title: Case Study: Anna Freud
+type: text/vnd.tiddlywiki
+
+Intertwingled Innovations operates the largest known TiddlyWiki instance for Anna Freud, a child mental health research, training and treatment centre located in London, United Kingdom. Anna Freud have developed a method of working with complex young people at high risk that is now used and adapted ways by teams around the world.
+
+<a href="https://manuals.annafreud.org/ambit/" rel="noopener noreferrer" target="_blank">
+<div 
+	style.float="right"
+	style.width="35%"
+	style.margin="0 1em 1em 0"
+	style.box-shadow="1px 1px 5px rgba(0, 0, 0, 0.3)"
+	style.padding="0.5em 0.5em 1.5em 0.5em"
+	style.transform="rotate(-4deg)"
+>
+<div
+	style.display="inline-block"
+	style.background="linear-gradient( 0deg, #ff6600, #ffff00 100%)"
+	style.background="linear-gradient( 0deg, color(display-p3 1 0.31 0), color(display-p3 1 1 0) 100%)"
+	style.line-height="0"
+>{{ambit-manual.jpg}}</div>
+</div>
+</a>
+
+Anna Freud are building a fractal, hypertext manual that allows multiple teams to own their own locally-customisable version of a centrally developed set of principles and evidence-based practices. It has over 3,000 users, and just over 500 wikis made up of 16,000 individual tiddlers, richly tagged and linked to one another.
+
+The Manuals use TiddlyWiki's simple and innovative "bags and recipes" architecture that allows tiddlers to be shared between wikis in flexible configurations.
