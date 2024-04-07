@@ -117,7 +117,7 @@ function measureTiddlers() {
 		tiddlerShuffledPositions[t] = {
 			x: minX + (maxX - minX) * pos,
 			y: shuffleTop,
-			rotate: -0.15 + Math.random() * 0.3,
+			rotate: 0.2 - pos * 0.4,
 			scale: scale
 		}
 	}
